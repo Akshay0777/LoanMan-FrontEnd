@@ -7,6 +7,18 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { FieldofficerComponent } from './fieldofficer/fieldofficer.component';
 import { CustomerComponent } from './customer/customer.component';
+import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
+
+//   MatTabsModule,
+//   MatFormsModule,
+//   MatInputModule,
+//   MatButtonModule,
+//   MatCheckBoxModule,
+//   MatIconModule
+// } from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -14,13 +26,18 @@ import { CustomerComponent } from './customer/customer.component';
     LoginComponent,
     AdminComponent,
     FieldofficerComponent,
-    CustomerComponent
+    CustomerComponent,
+    HomeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
-  selector: 'app-customer',
+  selector: 'app-customer', 
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.scss']
 })
