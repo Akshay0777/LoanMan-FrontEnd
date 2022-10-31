@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="header">
+        <!-- <div>
+            <input type="text" class="form-control" [(ngModel)]="filter"
+            placeholder="Search text here... ">
+            <br>
+        </div>  -->
+    </div>
+    <div style="overflow-x: scroll;">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Officer Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Ratings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr *ngFor="let user of this.usersService.users | filter:filter | paginate: {itemsPerPage:4, currentPage: page}"  [ngStyle]="{'background-color': user.active === true ? 'white' : '#F9EBEA' }"> -->
+                <tr *ngFor=""  [ngStyle]=" {'background-color': customer.active === true ? 'white' : '#F9EBEA'} ">
+                    <td>{{customer.custId}}</td>
+                    <td>{{customer.custName}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.phone}}</td>
+                    <td>{{customer.panCard}}</td>
+                    <td>{{customer.adharCard}}</td>
+                    <td>{{customer.salary}}</td>
+                    <td>{{customer.address}}</td>
+                    <td>{{customer.rating}}</td>
+                    <td>
+                        <button class="btn btn-warning p-1 mx-1"
+                            (click)="populateForm(user)"
+                        ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        
+                        <button class="btn btn-danger p-1 mx-1"
+                            (click)="deleteUser(user)" ><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <!-- pagination -->
+        <!-- <pagination-controls (pageChange)="page = ($event)"></pagination-controls> -->
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RequestService} from '../shared/request.service'
 
 @Component({
   selector: 'app-fieldofficer',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FieldofficerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public requestService : RequestService) { }
 
   ngOnInit(): void {
+    
+    
   }
 
 }

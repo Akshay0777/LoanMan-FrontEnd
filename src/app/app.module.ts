@@ -11,14 +11,15 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { CustomerlistComponent } from './customer/customerlist/customerlist.component';
+import { FieldofficerlistComponent } from './fieldofficer/fieldofficerlist/fieldofficerlist.component';
+import { FieldofficeraddComponent } from './fieldofficer/fieldofficeradd/fieldofficeradd.component';
+import {HttpClientModule} from '@angular/common/http';
+import { RequestComponent } from './request/request.component';
+import { RequestlistComponent } from './request/requestlist/requestlist.component';
+import { RequestaddComponent } from './request/requestadd/requestadd.component';
 
-//   MatTabsModule,
-//   MatFormsModule,
-//   MatInputModule,
-//   MatButtonModule,
-//   MatCheckBoxModule,
-//   MatIconModule
-// } from '@angular/material'
+
 
 @NgModule({
   declarations: [
@@ -28,13 +29,20 @@ import { SignupComponent } from './signup/signup.component';
     FieldofficerComponent,
     CustomerComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    CustomerlistComponent,
+    FieldofficerlistComponent,
+    FieldofficeraddComponent,
+    RequestComponent,
+    RequestlistComponent,
+    RequestaddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

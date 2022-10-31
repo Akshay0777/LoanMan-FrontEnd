@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../shared/customer.service'
+import {RequestService} from '../shared/request.service'
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(public customerService : CustomerService, public requestService : RequestService) { }
 
   ngOnInit(): void {
+    // this.customerService.bindAllCustomers();
   }
 
 }
