@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiCustomer : 'http://localhost:3001/api/cust',
-  apiRequest : 'http://localhost:3001/api/req',
-  apiOfficer : 'http://localhost:3001/api/officer'
+  apiCustomer : 'http://localhost:3001/api/cust/',
+  apiRequest : 'http://localhost:3001/api/req/',
+  apiOfficer : 'http://localhost:3001/api/officer/'
 };
 
 /*

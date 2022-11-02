@@ -9,6 +9,10 @@ import { environment } from 'src/environments/environment';
 })
 export class CustomerService {
 
+  totalCustomers : number;
+  
+  tempCustomer : Customer = null;
+
   formCustomerData : Customer = new Customer();
 
   customers : Customer[];
@@ -26,9 +30,22 @@ export class CustomerService {
       (response)=>{
         console.log(response);
         this.customers = response as Customer[]
+        this.totalCustomers = this.customers.length;
       }
     )
   }
+
+  getCustomerId(id : number){
+    for (let i = 0; i < this.customers.length; i++) {
+      if(this.customers[i].custId == id){
+        return this.customers[i];
+      }
+    }
+  }
+  
+
+  
+
 
 
 }

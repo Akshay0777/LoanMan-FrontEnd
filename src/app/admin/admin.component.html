@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card text-dark shadow bg-light mb-3 mx-2">
-                    <div class="card-header text-center"><i class="fa fa-money" aria-hidden="true"></i></div>
+                    <div class="card-header text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
                     <div class="card-body">
-                        <h3 class="card-text text-center">100000</h3>
+                        <h3 class="card-text text-center">{{this.customerService.totalCustomers}}</h3>
                     <p class="card-title text-center">Total Customers</p>
                     </div>
                 </div>
@@ -19,16 +19,16 @@
                 <div class="card text-dark shadow bg-light mb-3 mx-2">
                     <div class="card-header text-center"><i class="fa fa-money" aria-hidden="true"></i></div>
                     <div class="card-body">
-                        <h3 class="card-text text-center">100000</h3>
+                        <h3 class="card-text text-center">{{this.requestService.totalLoan}}</h3>
                     <p class="card-title text-center">Total Loan Given by Bank</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card text-dark shadow bg-light mb-3 mx-2">
-                    <div class="card-header text-center"><i class="fa fa-money" aria-hidden="true"></i></div>
+                    <div class="card-header text-center"><i class="fa fa-male" aria-hidden="true"></i></div>
                     <div class="card-body">
-                        <h3 class="card-text text-center">100000</h3>
+                        <h3 class="card-text text-center">{{this.fieldofficerService.totalOfficer}}</h3>
                     <p class="card-title text-center">Total Feild Officers</p>
                     </div>
                 </div>
@@ -37,22 +37,42 @@
     </div>
 
     <div class="container mt-5">
-        <h3 class="text-center">Requests</h3>
-        <app-requestlist></app-requestlist>
+        <div class="row">
+                <h3 class="text-center">Request Pending by Admin</h3>
+                <app-pendingadminrequestlist></app-pendingadminrequestlist>
+        </div>
     </div>
 
-
-
+    <!-- yet to assign officer -->
     <div class="container mt-5">
+        <h3 class="text-center">Requests for assigning officer</h3>
+        <app-assignofficertorequest></app-assignofficertorequest>
+    </div>
+
+    <!-- Total Request -->
+    <!-- <div class="container mt-5">
+        <h3 class="text-center">Requests for assigning officer</h3>
+        <app-requestlist></app-requestlist>
+    </div> -->
+
+    <!-- all officer -->
+    <!-- <div class="container mt-5">
+        <h3 class="text-center">Requests for assigning officer</h3>
+        <app-requestlist></app-requestlist>
+    </div> -->
+
+
+
+    <!-- <div class="container mt-5">
         <h3 class="text-center">All Customers List</h3>
         <app-customerlist></app-customerlist>
-    </div>
+    </div> -->
     
 
-    <div class="container mt-5">
+    <!-- <div class="container mt-5">
         <h3 class="text-center">All Feild Officers List</h3>
-        <!-- <app-fieldofficerlist></app-fieldofficerlist> -->
-    </div>
+        <app-fieldofficerlist></app-fieldofficerlist>
+    </div> -->
 
 
 

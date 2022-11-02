@@ -18,6 +18,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { RequestComponent } from './request/request.component';
 import { RequestlistComponent } from './request/requestlist/requestlist.component';
 import { RequestaddComponent } from './request/requestadd/requestadd.component';
+import { PendingadminrequestlistComponent } from './request/pendingadminrequestlist/pendingadminrequestlist.component';
+import { PendingofficerrequestlistComponent } from './request/pendingofficerrequestlist/pendingofficerrequestlist.component';
+import { AssignofficertorequestComponent } from './request/assignofficertorequest/assignofficertorequest.component';
 
 
 
@@ -35,7 +38,10 @@ import { RequestaddComponent } from './request/requestadd/requestadd.component';
     FieldofficeraddComponent,
     RequestComponent,
     RequestlistComponent,
-    RequestaddComponent
+    RequestaddComponent,
+    PendingadminrequestlistComponent,
+    PendingofficerrequestlistComponent,
+    AssignofficertorequestComponent
   ],
   imports: [
     BrowserModule,

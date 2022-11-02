@@ -1,47 +1,36 @@
 <div class="container">
-    <div class="header">
-        <!-- <div>
-            <input type="text" class="form-control" [(ngModel)]="filter"
-            placeholder="Search text here... ">
-            <br>
-        </div>  -->
-    </div>
     <div style="overflow-x: scroll;">
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Request Message</th>
-                    <th>Status</th>
-                    <th>Officer Status</th>
                     <th>Amount</th>
                     <th>Months</th>
                     <th>verified by Officer</th>
                     <th>Customer</th>
                     <th>Assigned Field Officer</th>
+                    <th>Approve</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- <tr *ngFor="let user of this.usersService.users | filter:filter | paginate: {itemsPerPage:4, currentPage: page}"  [ngStyle]="{'background-color': user.active === true ? 'white' : '#F9EBEA' }"> -->
-                <tr *ngFor="let request of this.requestService.requests"  >
+                <tr *ngFor="let request of this.requestService.pendingAdminRequest"  >
                     <td>{{request.reqId}}</td>
                     <td>{{request.reqMsg}}</td>
-                    <td>{{request.status}}</td>
-                    <td>{{request.officerStatus}}</td>
                     <td>{{request.amount}}</td>
                     <td>{{request.months}}</td>
-                    <td>{{request.isVerified}}</td>
-                    <td>{{request.custId}}</td>
-                    <td>{{request.officerId}}</td>
-                    
+                    <td *ngIf="request.isVerified == 1" style="color: yellow;">Pending</td>
+                    <td *ngIf="request.isVerified == 0" style="color: red;">Rejected</td>
+                    <td *ngIf="request.isVerified == 2" style="color: Green;">Approved</td>
+                    <td >{{this.customerService.getCustomerId(request.custId).custName}}</td>
+                    <td >{{this.fieldofficerService.getOfficerId(request.officerId).name}}</td>
                     <td>
-                        <button class="btn btn-warning p-1 mx-1"
-                            (click)="populateForm(user)"
-                        ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                        
-                        <button class="btn btn-danger p-1 mx-1"
-                            (click)="deleteUser(user)" ><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button class="btn btn-success" (click)="adminApproved(request)">Approve</button>
+                        <button class="btn btn-danger" (click)="adminRejected(request)">Reject</button>
                     </td>
+                    
+                    
                 
                 </tr>
             </tbody>

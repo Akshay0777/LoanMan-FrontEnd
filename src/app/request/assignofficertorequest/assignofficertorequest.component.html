@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <!-- <tr *ngFor="let user of this.usersService.users | filter:filter | paginate: {itemsPerPage:4, currentPage: page}"  [ngStyle]="{'background-color': user.active === true ? 'white' : '#F9EBEA' }"> -->
-                <tr *ngFor="let request of this.requestService.requests"  >
+                <tr *ngFor="let request of this.requestService.assignOfficerRequests"  >
                     <td>{{request.reqId}}</td>
                     <td>{{request.reqMsg}}</td>
                     <td>{{request.status}}</td>
@@ -32,15 +32,18 @@
                     <td>{{request.months}}</td>
                     <td>{{request.isVerified}}</td>
                     <td>{{request.custId}}</td>
-                    <td>{{request.officerId}}</td>
+                    <td>
+                        <select [(ngModel)]="selectedOfficer">
+                            <option default>Select a Officer</option>
+                            <option *ngFor="let officer of this.fieldofficerService.fieldOfficers" value="{{officer.officerId}}">{{officer.name}}</option>
+                        </select>
+                    </td>
+                    <!-- <td>{{request.officerId}}</td> -->
                     
                     <td>
-                        <button class="btn btn-warning p-1 mx-1"
-                            (click)="populateForm(user)"
-                        ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                        
-                        <button class="btn btn-danger p-1 mx-1"
-                            (click)="deleteUser(user)" ><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button class="btn btn-primary p-1 mx-1"
+                            (click)="assignOfficer(request)"
+                        >Sent</button>
                     </td>
                 
                 </tr>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminComponent } from 'src/app/admin/admin.component';
 import { CustomerService } from '../../shared/customer.service'
 
 @Component({
@@ -8,13 +9,15 @@ import { CustomerService } from '../../shared/customer.service'
 })
 export class CustomerlistComponent implements OnInit {
 
-  constructor(public customerService : CustomerService) { }
+  constructor(public customerService : CustomerService, public adminComponent : AdminComponent) { }
 
   ngOnInit(): void {
     console.log("Welcome to customer list");
     
-    this.customerService.bindAllCustomers();
     console.log(this.customerService.customers);
+    
+
+    
     
   }
 
