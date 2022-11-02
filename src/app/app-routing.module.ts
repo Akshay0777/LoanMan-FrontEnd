@@ -12,11 +12,10 @@ const routes: Routes = [
   { path : 'home', component: HomeComponent},
   { path : 'login', component: LoginComponent},
   { path : 'admin', component: AdminComponent},
-<<<<<<< HEAD
+
   { path: 'customer',component:CustomerComponent},
   { path: 'officer',component:FieldofficerComponent}
-=======
->>>>>>> 718b56c916745965bd90809c27dd49436d4f92e0
+
 ];
 
 @NgModule({
