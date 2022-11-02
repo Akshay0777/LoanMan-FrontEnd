@@ -1,1 +1,42 @@
-<h1>login</h1>
+<div class="container d-flex">
+    
+  <div class="col-md-5 p-2">
+    <form>
+        <!-- Email or username input -->
+        <h2>Please Login</h2>
+        <div class="form-outline mb-4">
+          <input type="email" id="loginName" class="form-control" autocomplete="off"/>
+          <label class="form-label" for="loginName">Email or username</label>
+        </div>
+        
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="loginPassword" class="form-control" />
+          <label class="form-label" for="loginPassword">Password</label>
+        </div>
+  
+        
+
+        <!--Choosing Roles-->
+        <select name="roel" id="role" class="form-outline mb-4">
+            <option value="" selected disabled>Select Role</option>
+            <option value="">Admin</option>
+            <option value="">Customer</option>
+            <option value="">Field Officer</option>
+        </select>
+        
+        <br>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary">Sign in</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="#!">Register</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-5 p-2">
+        <app-signup></app-signup>
+    </div>
+   </div>
